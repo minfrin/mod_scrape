@@ -1,0 +1,37 @@
+# RPM Spec file for mod_scrape
+
+Name:      mod_ical
+Version:   @PACKAGE_VERSION@
+Release:   1%{?dist}
+Summary:   Apache httpd scrape filter module
+License:   ASL 2.0
+Group:     System Environment/Daemons
+Source:    https://github.com/minfrin/%{name}/releases/download/%{name}-%{version}/%{name}-%{version}.tar.bz2
+Url:       https://github.com/minfrin/%{name}
+BuildRequires: gcc, pkgconfig(apr-1), pkgconfig(apr-util-1), httpd-devel
+Requires: httpd
+
+%description
+The Apache mod_scrape module provides a set of filters to
+save requests and responses passing through the server to
+files on disk.
+
+%prep
+%setup -q
+%build
+%configure
+%make_build
+
+%install
+%make_install
+
+%files
+%{_libdir}/httpd/modules/mod_scrape.so
+
+%doc AUTHORS ChangeLog README.md
+%license COPYING
+
+%changelog
+* Sun May 29 2016 Graham Leggett <minfrin@sharp.fm> - 1.0.0-1
+- Initial version of the package
+
