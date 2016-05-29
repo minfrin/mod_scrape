@@ -1,0 +1,13 @@
+Source: mod-scrape
+Priority: extra
+Maintainer: Graham Leggett <minfrin@sharp.fm>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, apache2-dev
+Standards-Version: 3.9.2
+Section: libs
+
+Package: mod-scrape
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: The Apache mod_scrape module provides a set of filters to save requests and responses passing through the server to files on disk.
+

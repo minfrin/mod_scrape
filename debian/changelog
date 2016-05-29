@@ -1,0 +1,5 @@
+mod-scrape (1.0.0) stable; urgency=low
+
+  * Initial Release.
+
+ -- Graham Leggett <minfrin@sharp.fm>  Sun, 29 May 2016 00:00:00 +0000
